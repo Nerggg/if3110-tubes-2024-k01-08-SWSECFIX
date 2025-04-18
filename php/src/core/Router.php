@@ -42,7 +42,7 @@ class Router
      */
     public function post(string $path, callable $handlerFactory, array $middlewaresFactory = [])
     {
-        $this->addRoute('POST', $path, $handlerFactory, $middlewaresFactory);
+        $this->addRoute('POST', $path, $handlerFactory, array_merge($middlewaresFactory, [$this->csrfMiddlewareFactory()]));
     }
 
     /**
@@ -50,7 +50,7 @@ class Router
      */
     public function put(string $path, callable $handlerFactory, array $middlewaresFactory = [])
     {
-        $this->addRoute('PUT', $path, $handlerFactory, $middlewaresFactory);
+        $this->addRoute('PUT', $path, $handlerFactory, array_merge($middlewaresFactory, [$this->csrfMiddlewareFactory()]));
     }
 
     /**
@@ -58,7 +58,51 @@ class Router
      */
     public function delete(string $path, callable $handlerFactory, array $middlewaresFactory = [])
     {
-        $this->addRoute('DELETE', $path, $handlerFactory, $middlewaresFactory);
+        $this->addRoute('DELETE', $path, $handlerFactory, array_merge($middlewaresFactory, [$this->csrfMiddlewareFactory()]));
+    }
+
+    // generate csrf token
+    private function generateCsrfToken(): string
+    {
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start();
+        }
+        $token = bin2hex(random_bytes(32));
+        $_SESSION['csrf_token'] = $token;
+        return $token;
+    }
+
+    // validate csrf token
+    private function validateCsrfToken(string $token): bool
+    {
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start();
+        }
+        return isset($_SESSION['csrf_token']) && hash_equals($_SESSION['csrf_token'], $token);
+    }
+
+    // CSRF middleware factory
+    private function csrfMiddlewareFactory(): callable
+    {
+        return function () {
+            return new class {
+                public function handle(Request $req, Response $res): void
+                {
+                    $method = $_SERVER['REQUEST_METHOD'];
+                    if (in_array($method, ['POST', 'PUT', 'DELETE'])) {
+                        $token = $_SERVER['HTTP_X_CSRF_TOKEN'] ?? $_POST['_csrf_token'] ?? '';
+                        if (!$token || !Router::validateCsrfToken($token)) {
+                            $res->renderError([
+                                'statusCode' => 403,
+                                'subHeading' => 'Invalid CSRF Token',
+                                'message' => 'CSRF token validation failed',
+                            ]);
+                            exit;
+                        }
+                    }
+                }
+            };
+        };
     }
 
     /**
@@ -126,19 +170,26 @@ class Router
             return false;
         }
 
-        // if the paths are different, return false
+        // validate each path segment
         for ($i = 0; $i < count($routerPaths); $i++) {
             // if the path is equal, continue
             if ($routerPaths[$i] === $uriPaths[$i]) {
                 continue;
             }
 
-            // if the path not a parameter, return false
-            if ($routerPaths[$i][0] !== '[' || $routerPaths[$i][strlen($routerPaths[$i]) - 1] !== ']') {
-                return false;
+            // if the path is a parameter (e.g., [id])
+            if ($routerPaths[$i][0] === '[' && $routerPaths[$i][strlen($routerPaths[$i]) - 1] === ']') {
+                // validate parameter value to prevent path traversal
+                $paramValue = $uriPaths[$i];
+                // allow only alphanumeric, underscores, and hyphens
+                if (!preg_match('/^[a-zA-Z0-9_-]+$/', $paramValue)) {
+                    return false;
+                }
+                continue;
             }
 
-            // if the path is a parameter, continue
+            // if the path is not a parameter and not equal, return false
+            return false;
         }
 
         return true;
