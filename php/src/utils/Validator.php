@@ -6,6 +6,12 @@ class Validator
 {
     // Error fields
     private $errorFields = [];
+    private const MAX_FILES = 10; // 10 just for practicality. change based on what the program needs
+    private const ALLOWED_MIME_TYPES = [
+        'image/jpeg',
+        'image/png',
+        'application/pdf'
+    ];
 
     /**
      * Validate the data (associative array) against the rules
@@ -102,9 +108,12 @@ class Validator
                         if ($value['error'] == UPLOAD_ERR_NO_FILE) {
                             continue 2;
                         }
-                        // allowed types
-                        if (!in_array($value['type'], $param['allowedTypes'])) {
-                            $message = ucfirst("$fieldInMessage must be one of " . implode(', ', $param['allowedTypes']));
+                        // validate file MIME using fileinfo
+                        $finfo = finfo_open(FILEINFO_MIME_TYPE);
+                        $mimeType = finfo_file($finfo, $value['tmp_name']);
+                        finfo_close($finfo);
+                        if (!in_array($mimeType, self::ALLOWED_MIME_TYPES)) {
+                            $message = ucfirst("$fieldInMessage must be one of " . implode(', ', self::ALLOWED_MIME_TYPES));
                             $this->addError($field, $message);
                         }
                         // max size
@@ -118,21 +127,28 @@ class Validator
                         if ($value['error'][0] == UPLOAD_ERR_NO_FILE) {
                             continue 2;
                         }
-                        // allowed types
-                        foreach ($value['type'] as $key => $type) {
-                            if (!in_array($type, $param['allowedTypes'])) {
-                                $message = ucfirst("$fieldInMessage must be one of " . implode(', ', $param['allowedTypes']));
+                        // limit number of files to prevent DoS
+                        if (count($value['name']) > self::MAX_FILES) {
+                            $message = ucfirst("$fieldInMessage exceeds maximum allowed files (" . self::MAX_FILES . ")");
+                            $this->addError($field, $message);
+                            break;
+                        }
+                        // Validate MIME type and size for each file
+                        $finfo = finfo_open(FILEINFO_MIME_TYPE);
+                        foreach ($value['tmp_name'] as $key => $tmpName) {
+                            $mimeType = finfo_file($finfo, $tmpName);
+                            if (!in_array($mimeType, self::ALLOWED_MIME_TYPES)) {
+                                $message = ucfirst("$fieldInMessage must be one of " . implode(', ', self::ALLOWED_MIME_TYPES));
                                 $this->addError($field, $message);
                             }
-                        }
-                        // max size
-                        foreach ($value['size'] as $key => $size) {
-                            if ($size > $param['maxSize']) {
+                            // max size
+                            if ($value['size'][$key] > $param['maxSize']) {
                                 $sizeMb = floor($param['maxSize'] / (1024 * 1024));
                                 $message = ucfirst("$fieldInMessage must be no more than " . $sizeMb . " MB");
                                 $this->addError($field, $message);
                             }
                         }
+                        finfo_close($finfo);
                         break;
                 }
             }
