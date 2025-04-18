@@ -1,0 +1,1345 @@
+ ------ ----------------------------------------------------------------------------------------------------------------------- 
+  Line   src/controllers/AuthController.php                                                                                     
+ ------ ----------------------------------------------------------------------------------------------------------------------- 
+  104    Variable $user might not be defined.                                                                                   
+         🪪  variable.undefined                                                                                                 
+  339    Method src\controllers\AuthController::handleDatabaseError() return type has no value type specified in iterable type  
+         array.                                                                                                                 
+         🪪  missingType.iterableValue                                                                                          
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                              
+ ------ ----------------------------------------------------------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------------------------------------------------------------- 
+  Line   src/controllers/CompanyController.php                                                                                        
+ ------ ----------------------------------------------------------------------------------------------------------------------------- 
+  31     Method src\controllers\CompanyController::handleGetJobApplicationData() has no return type specified.                        
+         🪪  missingType.return                                                                                                       
+  48     Parameter #1 $companyId of method src\services\CompanyService::getCompanyJobApplicationCSVData() expects int, int|null       
+         given.                                                                                                                       
+         🪪  argument.type                                                                                                            
+  48     Parameter #2 $jobId of method src\services\CompanyService::getCompanyJobApplicationCSVData() expects int, string|null        
+         given.                                                                                                                       
+         🪪  argument.type                                                                                                            
+  69     Variable $applications might not be defined.                                                                                 
+         🪪  variable.undefined                                                                                                       
+  133    Parameter #1 $userId of method src\services\CompanyService::createJob() expects int, int|null given.                         
+         🪪  argument.type                                                                                                            
+  200    Parameter #1 $rawIsOpens of method src\controllers\CompanyController::parseCompanyJobQueryParams() expects array|null,       
+         array|string|null given.                                                                                                     
+         🪪  argument.type                                                                                                            
+  200    Parameter #2 $rawJobTypes of method src\controllers\CompanyController::parseCompanyJobQueryParams() expects array|null,      
+         array|string|null given.                                                                                                     
+         🪪  argument.type                                                                                                            
+  200    Parameter #3 $rawLocationTypes of method src\controllers\CompanyController::parseCompanyJobQueryParams() expects             
+         array|null, array|string|null given.                                                                                         
+         🪪  argument.type                                                                                                            
+  200    Parameter #4 $rawCreatedAtFrom of method src\controllers\CompanyController::parseCompanyJobQueryParams() expects             
+         string|null, array|string|null given.                                                                                        
+         🪪  argument.type                                                                                                            
+  200    Parameter #5 $rawCreatedAtTo of method src\controllers\CompanyController::parseCompanyJobQueryParams() expects string|null,  
+         array|string|null given.                                                                                                     
+         🪪  argument.type                                                                                                            
+  200    Parameter #6 $rawSearch of method src\controllers\CompanyController::parseCompanyJobQueryParams() expects string|null,       
+         array|string|null given.                                                                                                     
+         🪪  argument.type                                                                                                            
+  200    Parameter #7 $rawSortCreatedAt of method src\controllers\CompanyController::parseCompanyJobQueryParams() expects             
+         string|null, array|string|null given.                                                                                        
+         🪪  argument.type                                                                                                            
+  200    Parameter #8 $rawPage of method src\controllers\CompanyController::parseCompanyJobQueryParams() expects string|null,         
+         array|string|null given.                                                                                                     
+         🪪  argument.type                                                                                                            
+  212    Parameter #1 $companyId of method src\services\CompanyService::getCompanyJobs() expects int, int|null given.                 
+         🪪  argument.type                                                                                                            
+  246    Method src\controllers\CompanyController::parseCompanyJobQueryParams() has parameter $rawIsOpens with no value type          
+         specified in iterable type array.                                                                                            
+         🪪  missingType.iterableValue                                                                                                
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                    
+  246    Method src\controllers\CompanyController::parseCompanyJobQueryParams() has parameter $rawJobTypes with no value type         
+         specified in iterable type array.                                                                                            
+         🪪  missingType.iterableValue                                                                                                
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                    
+  246    Method src\controllers\CompanyController::parseCompanyJobQueryParams() has parameter $rawLocationTypes with no value type    
+         specified in iterable type array.                                                                                            
+         🪪  missingType.iterableValue                                                                                                
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                    
+  246    Method src\controllers\CompanyController::parseCompanyJobQueryParams() return type has no value type specified in iterable   
+         type array.                                                                                                                  
+         🪪  missingType.iterableValue                                                                                                
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                    
+  381    Parameter #1 $rawPage of method src\controllers\CompanyController::parseCompanyJobApplicationQueryParams() expects           
+         string|null, array|string|null given.                                                                                        
+         🪪  argument.type                                                                                                            
+  393    Parameter #1 $companyId of method src\services\CompanyService::getCompanyJobApplications() expects int, int|null given.      
+         🪪  argument.type                                                                                                            
+  393    Parameter #2 $job_id of method src\services\CompanyService::getCompanyJobApplications() expects int, string|null given.      
+         🪪  argument.type                                                                                                            
+  427    Method src\controllers\CompanyController::parseCompanyJobApplicationQueryParams() return type has no value type specified    
+         in iterable type array.                                                                                                      
+         🪪  missingType.iterableValue                                                                                                
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                    
+  490    Parameter #1 $currentUserId of method src\services\CompanyService::getCompanyJobApplication() expects int, int|null given.   
+         🪪  argument.type                                                                                                            
+  490    Parameter #2 $applicationId of method src\services\CompanyService::getCompanyJobApplication() expects int, string|null       
+         given.                                                                                                                       
+         🪪  argument.type                                                                                                            
+  532    Parameter #1 $currentUserId of method src\services\CompanyService::updateJobApplicationStatus() expects int, int|null        
+         given.                                                                                                                       
+         🪪  argument.type                                                                                                            
+  532    Parameter #2 $applicationId of method src\services\CompanyService::updateJobApplicationStatus() expects int, string|null     
+         given.                                                                                                                       
+         🪪  argument.type                                                                                                            
+  596    Parameter #1 $jobId of method src\services\CompanyService::getJobDetail() expects int, string|null given.                    
+         🪪  argument.type                                                                                                            
+  644    Parameter #1 $currentUserId of method src\services\CompanyService::editJob() expects int, int|null given.                    
+         🪪  argument.type                                                                                                            
+  644    Parameter #2 $jobId of method src\services\CompanyService::editJob() expects int, string|null given.                         
+         🪪  argument.type                                                                                                            
+  687    Parameter #1 $currentUserId of method src\services\CompanyService::deleteJob() expects int, int|null given.                  
+         🪪  argument.type                                                                                                            
+  687    Parameter #2 $jobId of method src\services\CompanyService::deleteJob() expects int, string|null given.                       
+         🪪  argument.type                                                                                                            
+  733    Parameter #1 $currentUserId of method src\services\CompanyService::deleteJobAttachment() expects int, int|null given.        
+         🪪  argument.type                                                                                                            
+  733    Parameter #2 $jobAttachmentId of method src\services\CompanyService::deleteJobAttachment() expects int, string|null given.   
+         🪪  argument.type                                                                                                            
+  785    Parameter #1 $userId of method src\services\CompanyService::getCompanyProfile() expects int, int|null given.                 
+         🪪  argument.type                                                                                                            
+  805    Variable $companyDetail might not be defined.                                                                                
+         🪪  variable.undefined                                                                                                       
+  806    Variable $companyDetail might not be defined.                                                                                
+         🪪  variable.undefined                                                                                                       
+  807    Variable $companyDetail might not be defined.                                                                                
+         🪪  variable.undefined                                                                                                       
+  834    Parameter #1 $userId of method src\services\CompanyService::updateCompanyProfile() expects int, int|null given.              
+         🪪  argument.type                                                                                                            
+ ------ ----------------------------------------------------------------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------------------------------------------------------------- 
+  Line   src/controllers/JobController.php                                                                                            
+ ------ ----------------------------------------------------------------------------------------------------------------------------- 
+  57     Parameter #2 $userId of method src\services\JobService::validateCvVideoRequest() expects int, string|null given.             
+         🪪  argument.type                                                                                                            
+  57     Parameter #3 $jobId of method src\services\JobService::validateCvVideoRequest() expects int, string|null given.              
+         🪪  argument.type                                                                                                            
+  74     Variable $application might not be defined.                                                                                  
+         🪪  variable.undefined                                                                                                       
+  74     Variable $application might not be defined.                                                                                  
+         🪪  variable.undefined                                                                                                       
+  75     Parameter #1 $path of method src\core\Response::blob() expects string, string|null given.                                    
+         🪪  argument.type                                                                                                            
+  123    Parameter #1 $rawJobTypes of method src\controllers\JobController::parseJobQueryParams() expects array|null,                 
+         array|string|null given.                                                                                                     
+         🪪  argument.type                                                                                                            
+  123    Parameter #2 $rawLocationTypes of method src\controllers\JobController::parseJobQueryParams() expects array|null,            
+         array|string|null given.                                                                                                     
+         🪪  argument.type                                                                                                            
+  123    Parameter #3 $rawCreatedAtFrom of method src\controllers\JobController::parseJobQueryParams() expects string|null,           
+         array|string|null given.                                                                                                     
+         🪪  argument.type                                                                                                            
+  123    Parameter #4 $rawCreatedAtTo of method src\controllers\JobController::parseJobQueryParams() expects string|null,             
+         array|string|null given.                                                                                                     
+         🪪  argument.type                                                                                                            
+  123    Parameter #5 $rawSearch of method src\controllers\JobController::parseJobQueryParams() expects string|null,                  
+         array|string|null given.                                                                                                     
+         🪪  argument.type                                                                                                            
+  123    Parameter #6 $rawSortCreatedAt of method src\controllers\JobController::parseJobQueryParams() expects string|null,           
+         array|string|null given.                                                                                                     
+         🪪  argument.type                                                                                                            
+  123    Parameter #7 $rawPage of method src\controllers\JobController::parseJobQueryParams() expects string|null, array|string|null  
+         given.                                                                                                                       
+         🪪  argument.type                                                                                                            
+  212    Parameter #2 $jobId of method src\services\JobService::getJobDetail() expects int, string|null given.                        
+         🪪  argument.type                                                                                                            
+  274    Parameter #2 $jobId of method src\services\JobService::getJobDetail() expects int, string|null given.                        
+         🪪  argument.type                                                                                                            
+  275    Parameter #1 $user_id of method src\services\JobService::isApplied() expects int, int|null given.                            
+         🪪  argument.type                                                                                                            
+  275    Parameter #2 $job_id of method src\services\JobService::isApplied() expects int, string|null given.                          
+         🪪  argument.type                                                                                                            
+  313    Parameter #1 $user_id of method src\services\JobService::applyJob() expects int, int|null given.                             
+         🪪  argument.type                                                                                                            
+  313    Parameter #2 $job_id of method src\services\JobService::applyJob() expects int, string|null given.                           
+         🪪  argument.type                                                                                                            
+  359    Method src\controllers\JobController::parseJobQueryParams() has parameter $rawJobTypes with no value type specified in       
+         iterable type array.                                                                                                         
+         🪪  missingType.iterableValue                                                                                                
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                    
+  359    Method src\controllers\JobController::parseJobQueryParams() has parameter $rawLocationTypes with no value type specified in  
+         iterable type array.                                                                                                         
+         🪪  missingType.iterableValue                                                                                                
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                    
+  359    Method src\controllers\JobController::parseJobQueryParams() return type has no value type specified in iterable type array.  
+         🪪  missingType.iterableValue                                                                                                
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                    
+  467    Parameter #1 $rawPage of method src\controllers\JobController::parseHistoryQueryParams() expects string|null,                
+         array|string|null given.                                                                                                     
+         🪪  argument.type                                                                                                            
+  472    Parameter #1 $user_id of method src\services\JobService::getApplicationsHistory() expects int, int|null given.               
+         🪪  argument.type                                                                                                            
+  503    Method src\controllers\JobController::parseHistoryQueryParams() has no return type specified.                                
+         🪪  missingType.return                                                                                                       
+ ------ ----------------------------------------------------------------------------------------------------------------------------- 
+
+ ------ ---------------------------------------------------------------------------------------------- 
+  Line   src/core/Application.php                                                                      
+ ------ ---------------------------------------------------------------------------------------------- 
+  40     Method src\core\Application::run() has no return type specified.                              
+         🪪  missingType.return                                                                        
+  59     Method src\core\Application::registerRoutes() has no return type specified.                   
+         🪪  missingType.return                                                                        
+  77     Method src\core\Application::registerMiscRoutes() has no return type specified.               
+         🪪  missingType.return                                                                        
+  117    Method src\core\Application::registerAuthRoutes() has no return type specified.               
+         🪪  missingType.return                                                                        
+  221    Method src\core\Application::registerJobSeekerRoutes() has no return type specified.          
+         🪪  missingType.return                                                                        
+  318    Method src\core\Application::registerCompanyRoutes() has no return type specified.            
+         🪪  missingType.return                                                                        
+  511    Method src\core\Application::registerContainer() has no return type specified.                
+         🪪  missingType.return                                                                        
+  564    Method src\core\Application::registerRepositoriesToContainer() has no return type specified.  
+         🪪  missingType.return                                                                        
+  599    Method src\core\Application::registerServicesToContainer() has no return type specified.      
+         🪪  missingType.return                                                                        
+  658    Method src\core\Application::registerMiddlewaresToContainer() has no return type specified.   
+         🪪  missingType.return                                                                        
+  690    Method src\core\Application::registerControllersToContainer() has no return type specified.   
+         🪪  missingType.return                                                                        
+ ------ ---------------------------------------------------------------------------------------------- 
+
+ ------ ---------------------------------------------------------- 
+  Line   src/core/Config.php                                       
+ ------ ---------------------------------------------------------- 
+  19     Property src\core\Config::$config has no type specified.  
+         🪪  missingType.property                                  
+ ------ ---------------------------------------------------------- 
+
+ ------ ------------------------------------------------------------------------------------- 
+  Line   src/core/Container.php                                                               
+ ------ ------------------------------------------------------------------------------------- 
+  9      Method src\core\ContainerInterface::bind() has no return type specified.             
+         🪪  missingType.return                                                               
+  10     Method src\core\ContainerInterface::get() has no return type specified.              
+         🪪  missingType.return                                                               
+  19     Property src\core\Container::$bindings has no type specified.                        
+         🪪  missingType.property                                                             
+  22     Property src\core\Container::$instances has no type specified.                       
+         🪪  missingType.property                                                             
+  29     Call to function is_callable() with callable(): mixed will always evaluate to true.  
+         🪪  function.alreadyNarrowedType                                                     
+  39     Method src\core\Container::get() has no return type specified.                       
+         🪪  missingType.return                                                               
+ ------ ------------------------------------------------------------------------------------- 
+
+ ------ -------------------------------------------------------------------------------------------------------------- 
+  Line   src/core/Request.php                                                                                          
+ ------ -------------------------------------------------------------------------------------------------------------- 
+  24     Property src\core\Request::$queryParams type has no value type specified in iterable type array.              
+         🪪  missingType.iterableValue                                                                                 
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                     
+  27     Property src\core\Request::$pathParams has no type specified.                                                 
+         🪪  missingType.property                                                                                      
+  30     Property src\core\Request::$body type has no value type specified in iterable type array.                     
+         🪪  missingType.iterableValue                                                                                 
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                     
+  42     Property src\core\Request::$reqPath (string) does not accept string|false|null.                               
+         🪪  assign.propertyType                                                                                       
+  92     Method src\core\Request::getQueryParams() return type has no value type specified in iterable type array.     
+         🪪  missingType.iterableValue                                                                                 
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                     
+  100    Method src\core\Request::getAllQueryParams() return type has no value type specified in iterable type array.  
+         🪪  missingType.iterableValue                                                                                 
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                     
+  116    Method src\core\Request::getBody() return type has no value type specified in iterable type array.            
+         🪪  missingType.iterableValue                                                                                 
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                     
+  173    Parameter #1 $json of function json_decode expects string, string|false given.                                
+         🪪  argument.type                                                                                             
+  183    Parameter #1 $string of function parse_str expects string, string|false given.                                
+         🪪  argument.type                                                                                             
+ ------ -------------------------------------------------------------------------------------------------------------- 
+
+ ------ ------------------------------------------------------------------------------------------------------------------ 
+  Line   src/core/Response.php                                                                                             
+ ------ ------------------------------------------------------------------------------------------------------------------ 
+  10     Method src\core\Response::json() has no return type specified.                                                    
+         🪪  missingType.return                                                                                            
+  10     Method src\core\Response::json() has parameter $data with no value type specified in iterable type array.         
+         🪪  missingType.iterableValue                                                                                     
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                         
+  18     Method src\core\Response::redirect() has no return type specified.                                                
+         🪪  missingType.return                                                                                            
+  27     Method src\core\Response::blob() has no return type specified.                                                    
+         🪪  missingType.return                                                                                            
+  41     Parameter #1 $finfo of function finfo_file expects finfo, finfo|false given.                                      
+         🪪  argument.type                                                                                                 
+  42     Parameter #1 $finfo of function finfo_close expects finfo, finfo|false given.                                     
+         🪪  argument.type                                                                                                 
+  55     Method src\core\Response::csv() has no return type specified.                                                     
+         🪪  missingType.return                                                                                            
+  55     Method src\core\Response::csv() has parameter $data with no value type specified in iterable type array.          
+         🪪  missingType.iterableValue                                                                                     
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                         
+  67     Parameter #1 $stream of function fputcsv expects resource, resource|false given.                                  
+         🪪  argument.type                                                                                                 
+  71     Parameter #1 $stream of function fclose expects resource, resource|false given.                                   
+         🪪  argument.type                                                                                                 
+  81     Method src\core\Response::renderPage() has parameter $data with no value type specified in iterable type array.   
+         🪪  missingType.iterableValue                                                                                     
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                         
+  81     PHPDoc tag @param references unknown parameter: $viewPathFromViews                                                
+         🪪  parameter.notFound                                                                                            
+  112    Method src\core\Response::renderError() has parameter $data with no value type specified in iterable type array.  
+         🪪  missingType.iterableValue                                                                                     
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                         
+  112    PHPDoc tag @param references unknown parameter: $message                                                          
+         🪪  parameter.notFound                                                                                            
+  112    PHPDoc tag @param references unknown parameter: $statusCode                                                       
+         🪪  parameter.notFound                                                                                            
+  112    PHPDoc tag @param references unknown parameter: $subheading                                                       
+         🪪  parameter.notFound                                                                                            
+ ------ ------------------------------------------------------------------------------------------------------------------ 
+
+ ------ --------------------------------------------------------------------------------------------------------------------------- 
+  Line   src/core/Router.php                                                                                                        
+ ------ --------------------------------------------------------------------------------------------------------------------------- 
+  9      Property src\core\Router::$routes has no type specified.                                                                   
+         🪪  missingType.property                                                                                                   
+  19     PHPDoc tag @param has invalid value (callable Factory function that returns the function handler (associative array        
+         controller, method) (only 1)): Unexpected token "Factory", expected variable at offset 180 on line 5                       
+         🪪  phpDoc.parseError                                                                                                      
+  20     PHPDoc tag @param has invalid value (callable Factory function that returns the middlewares (>= 0)): Unexpected token      
+         "Factory", expected variable at offset 302 on line 6                                                                       
+         🪪  phpDoc.parseError                                                                                                      
+  22     Method src\core\Router::addRoute() has parameter $middlewaresFactory with no value type specified in iterable type array.  
+         🪪  missingType.iterableValue                                                                                              
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                  
+  35     Method src\core\Router::get() has no return type specified.                                                                
+         🪪  missingType.return                                                                                                     
+  35     Method src\core\Router::get() has parameter $middlewaresFactory with no value type specified in iterable type array.       
+         🪪  missingType.iterableValue                                                                                              
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                  
+  43     Method src\core\Router::post() has no return type specified.                                                               
+         🪪  missingType.return                                                                                                     
+  43     Method src\core\Router::post() has parameter $middlewaresFactory with no value type specified in iterable type array.      
+         🪪  missingType.iterableValue                                                                                              
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                  
+  51     Method src\core\Router::put() has no return type specified.                                                                
+         🪪  missingType.return                                                                                                     
+  51     Method src\core\Router::put() has parameter $middlewaresFactory with no value type specified in iterable type array.       
+         🪪  missingType.iterableValue                                                                                              
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                  
+  59     Method src\core\Router::delete() has no return type specified.                                                             
+         🪪  missingType.return                                                                                                     
+  59     Method src\core\Router::delete() has parameter $middlewaresFactory with no value type specified in iterable type array.    
+         🪪  missingType.iterableValue                                                                                              
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                  
+  74     Parameter #2 $uri of method src\core\Router::matchPath() expects string, string|false|null given.                          
+         🪪  argument.type                                                                                                          
+ ------ --------------------------------------------------------------------------------------------------------------------------- 
+
+ ------ ------------------------------------------------------------------------------------------------------------------ 
+  Line   src/dao/ApplicationDao.php                                                                                        
+ ------ ------------------------------------------------------------------------------------------------------------------ 
+  34     Method src\dao\ApplicationDao::fromRaw() has parameter $raw with no value type specified in iterable type array.  
+         🪪  missingType.iterableValue                                                                                     
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                         
+ ------ ------------------------------------------------------------------------------------------------------------------ 
+
+ ------ ---------------------------------------------------------- 
+  Line   src/dao/ApplicationStatus.php                             
+ ------ ---------------------------------------------------------- 
+  13     Match expression does not handle remaining value: string  
+         🪪  match.unhandled                                       
+ ------ ---------------------------------------------------------- 
+
+ ------ -------------------------------------------------------------------------------------------------------------------- 
+  Line   src/dao/CompanyDetailDao.php                                                                                        
+ ------ -------------------------------------------------------------------------------------------------------------------- 
+  22     Method src\dao\CompanyDetailDao::fromRaw() has parameter $raw with no value type specified in iterable type array.  
+         🪪  missingType.iterableValue                                                                                       
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                           
+ ------ -------------------------------------------------------------------------------------------------------------------- 
+
+ ------ -------------------------------------------------------------------------------------------------------------------- 
+  Line   src/dao/JobAttachmentDao.php                                                                                        
+ ------ -------------------------------------------------------------------------------------------------------------------- 
+  18     Method src\dao\JobAttachmentDao::fromRaw() has parameter $raw with no value type specified in iterable type array.  
+         🪪  missingType.iterableValue                                                                                       
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                           
+ ------ -------------------------------------------------------------------------------------------------------------------- 
+
+ ------ ------------------------------------------------------------------------------------------------------------------------- 
+  Line   src/dao/JobDao.php                                                                                                       
+ ------ ------------------------------------------------------------------------------------------------------------------------- 
+  21     Property src\dao\JobDao::$attachments type has no value type specified in iterable type array.                           
+         🪪  missingType.iterableValue                                                                                            
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                
+  43     Method src\dao\JobDao::fromRaw() has parameter $raw with no value type specified in iterable type array.                 
+         🪪  missingType.iterableValue                                                                                            
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                
+  84     Method src\dao\JobDao::getAttachments() return type has no value type specified in iterable type array.                  
+         🪪  missingType.iterableValue                                                                                            
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                
+  129    Method src\dao\JobDao::setAttachments() has parameter $attachments with no value type specified in iterable type array.  
+         🪪  missingType.iterableValue                                                                                            
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                
+ ------ ------------------------------------------------------------------------------------------------------------------------- 
+
+ ------ ---------------------------------------------------------------------------------------------------------- 
+  Line   src/dao/JobType.php                                                                                       
+ ------ ---------------------------------------------------------------------------------------------------------- 
+  11     Method src\dao\JobType::getValues() return type has no value type specified in iterable type array.       
+         🪪  missingType.iterableValue                                                                             
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                 
+  35     Match arm comparison between src\dao\JobType::INTERNSHIP and src\dao\JobType::INTERNSHIP is always true.  
+         🪪  match.alwaysTrue                                                                                      
+         💡 Remove remaining cases below this one and this error will disappear too.                               
+ ------ ---------------------------------------------------------------------------------------------------------- 
+
+ ------ ------------------------------------------------------------------------------------------------------------ 
+  Line   src/dao/LocationType.php                                                                                    
+ ------ ------------------------------------------------------------------------------------------------------------ 
+  11     Method src\dao\LocationType::getValues() return type has no value type specified in iterable type array.    
+         🪪  missingType.iterableValue                                                                               
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                   
+  35     Match arm comparison between src\dao\LocationType::REMOTE and src\dao\LocationType::REMOTE is always true.  
+         🪪  match.alwaysTrue                                                                                        
+         💡 Remove remaining cases below this one and this error will disappear too.                                 
+ ------ ------------------------------------------------------------------------------------------------------------ 
+
+ ------ ----------------------------------------------------------------------------- 
+  Line   src/dao/PaginationMetaDao.php                                                
+ ------ ----------------------------------------------------------------------------- 
+  17     Property src\dao\PaginationMetaDao::$totalPage (int) does not accept float.  
+         🪪  assign.propertyType                                                      
+ ------ ----------------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------------------------------------------- 
+  Line   src/dao/UserDao.php                                                                                        
+ ------ ----------------------------------------------------------------------------------------------------------- 
+  24     Method src\dao\UserDao::fromRaw() has parameter $raw with no value type specified in iterable type array.  
+         🪪  missingType.iterableValue                                                                              
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                  
+ ------ ----------------------------------------------------------------------------------------------------------- 
+
+ ------ -------------------------------------------------------------------------------------------------------------------------- 
+  Line   src/database/Database.php                                                                                                 
+ ------ -------------------------------------------------------------------------------------------------------------------------- 
+  17     Property src\database\Database::$connection has no type specified.                                                        
+         🪪  missingType.property                                                                                                  
+  27     Method src\database\Database::connect() has no return type specified.                                                     
+         🪪  missingType.return                                                                                                    
+  50     Method src\database\Database::disconnect() has no return type specified.                                                  
+         🪪  missingType.return                                                                                                    
+  58     Method src\database\Database::queryOne() has parameter $params with no value type specified in iterable type array.       
+         🪪  missingType.iterableValue                                                                                             
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                 
+  58     Method src\database\Database::queryOne() return type has no value type specified in iterable type array.                  
+         🪪  missingType.iterableValue                                                                                             
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                 
+  68     Method src\database\Database::queryMany() has parameter $params with no value type specified in iterable type array.      
+         🪪  missingType.iterableValue                                                                                             
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                 
+  68     Method src\database\Database::queryMany() return type has no value type specified in iterable type array.                 
+         🪪  missingType.iterableValue                                                                                             
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                 
+  79     Method src\database\Database::executeUpdate() has parameter $params with no value type specified in iterable type array.  
+         🪪  missingType.iterableValue                                                                                             
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                 
+  90     Method src\database\Database::executeDelete() has parameter $params with no value type specified in iterable type array.  
+         🪪  missingType.iterableValue                                                                                             
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                 
+  99     Method src\database\Database::executeInsert() has parameter $params with no value type specified in iterable type array.  
+         🪪  missingType.iterableValue                                                                                             
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                 
+  110    Method src\database\Database::getConnection() has no return type specified.                                               
+         🪪  missingType.return                                                                                                    
+  118    Method src\database\Database::beginTransaction() has no return type specified.                                            
+         🪪  missingType.return                                                                                                    
+  126    Method src\database\Database::commit() has no return type specified.                                                      
+         🪪  missingType.return                                                                                                    
+  134    Method src\database\Database::rollback() has no return type specified.                                                    
+         🪪  missingType.return                                                                                                    
+ ------ -------------------------------------------------------------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------------------------------------------------------------- 
+  Line   src/dto/DtoFactory.php                                                                                                       
+ ------ ----------------------------------------------------------------------------------------------------------------------------- 
+  13     Method src\dto\DtoFactory::createSuccessDto() return type has no value type specified in iterable type array.                
+         🪪  missingType.iterableValue                                                                                                
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                    
+  22     Method src\dto\DtoFactory::createSuccessDtoWithData() return type has no value type specified in iterable type array.        
+         🪪  missingType.iterableValue                                                                                                
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                    
+  31     Method src\dto\DtoFactory::createSuccessDtoWithPagination() return type has no value type specified in iterable type array.  
+         🪪  missingType.iterableValue                                                                                                
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                    
+  33     Class src\dto\SuccessPagedPaginationDto constructor invoked with 3 parameters, 2 required.                                   
+         🪪  arguments.count                                                                                                          
+  33     Parameter #2 $meta of class src\dto\SuccessPagedPaginationDto constructor expects src\dto\PagedPaginationMetaDto, object     
+         given.                                                                                                                       
+         🪪  argument.type                                                                                                            
+  40     Method src\dto\DtoFactory::createErrorDto() has parameter $errorFields with no value type specified in iterable type array.  
+         🪪  missingType.iterableValue                                                                                                
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                    
+  40     Method src\dto\DtoFactory::createErrorDto() return type has no value type specified in iterable type array.                  
+         🪪  missingType.iterableValue                                                                                                
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                    
+ ------ ----------------------------------------------------------------------------------------------------------------------------- 
+
+ ------ ------------------------------------------------------------------------------------------------------------------------ 
+  Line   src/dto/ErrorDto.php                                                                                                    
+ ------ ------------------------------------------------------------------------------------------------------------------------ 
+  10     Property src\dto\ErrorDto::$errorFields type has no value type specified in iterable type array.                        
+         🪪  missingType.iterableValue                                                                                           
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                               
+  12     Method src\dto\ErrorDto::__construct() has parameter $errorFields with no value type specified in iterable type array.  
+         🪪  missingType.iterableValue                                                                                           
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                               
+  18     Method src\dto\ErrorDto::getErrorFields() return type has no value type specified in iterable type array.               
+         🪪  missingType.iterableValue                                                                                           
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                               
+  23     Method src\dto\ErrorDto::toArray() return type has no value type specified in iterable type array.                      
+         🪪  missingType.iterableValue                                                                                           
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                               
+ ------ ------------------------------------------------------------------------------------------------------------------------ 
+
+ ------ ------------------------------------------------------------------------------------------------------ 
+  Line   src/dto/SuccessDto.php                                                                                
+ ------ ------------------------------------------------------------------------------------------------------ 
+  23     Method src\dto\SuccessDto::toArray() return type has no value type specified in iterable type array.  
+         🪪  missingType.iterableValue                                                                         
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type             
+ ------ ------------------------------------------------------------------------------------------------------ 
+
+ ------ --------------------------------------------------------------------------------------------------------------------- 
+  Line   src/dto/SuccessPagedPaginationDto.php                                                                                
+ ------ --------------------------------------------------------------------------------------------------------------------- 
+  20     Method src\dto\SuccessPagedPaginationDto::toArray() return type has no value type specified in iterable type array.  
+         🪪  missingType.iterableValue                                                                                        
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                            
+ ------ --------------------------------------------------------------------------------------------------------------------- 
+
+ ------ ------------------------------------------------------------------------------------------------------------------------- 
+  Line   src/exceptions/BadRequestHttpException.php                                                                               
+ ------ ------------------------------------------------------------------------------------------------------------------------- 
+  7      Method src\exceptions\BadRequestHttpException::__construct() has parameter $fieldErrors with no value type specified in  
+         iterable type array.                                                                                                     
+         🪪  missingType.iterableValue                                                                                            
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                
+ ------ ------------------------------------------------------------------------------------------------------------------------- 
+
+ ------ ---------------------------------------------------------------------------------------------------------------------------- 
+  Line   src/exceptions/BaseHttpException.php                                                                                        
+ ------ ---------------------------------------------------------------------------------------------------------------------------- 
+  12     Property src\exceptions\BaseHttpException::$fieldErrors type has no value type specified in iterable type array.            
+         🪪  missingType.iterableValue                                                                                               
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                   
+  15     Method src\exceptions\BaseHttpException::__construct() has parameter $fieldErrors with no value type specified in iterable  
+         type array.                                                                                                                 
+         🪪  missingType.iterableValue                                                                                               
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                   
+ ------ ---------------------------------------------------------------------------------------------------------------------------- 
+
+ ------ --------------------------------------------------------------------------------------------------------------------------- 
+  Line   src/exceptions/HttpExceptionFactory.php                                                                                    
+ ------ --------------------------------------------------------------------------------------------------------------------------- 
+  7      Method src\exceptions\HttpExceptionFactory::createBadRequest() has parameter $fieldErrors with no value type specified in  
+         iterable type array.                                                                                                       
+         🪪  missingType.iterableValue                                                                                              
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                  
+ ------ --------------------------------------------------------------------------------------------------------------------------- 
+
+ ------ ------------------------------------------------------------------------------------------------------------------------- 
+  Line   src/middlewares/AuthMiddleware.php                                                                                       
+ ------ ------------------------------------------------------------------------------------------------------------------------- 
+  11     Property src\middlewares\AuthMiddleware::$roles type has no value type specified in iterable type array.                 
+         🪪  missingType.iterableValue                                                                                            
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                
+  16     Method src\middlewares\AuthMiddleware::__construct() has parameter $roles with no value type specified in iterable type  
+         array.                                                                                                                   
+         🪪  missingType.iterableValue                                                                                            
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                
+  27     Method src\middlewares\AuthMiddleware::handle() has no return type specified.                                            
+         🪪  missingType.return                                                                                                   
+  27     PHPDoc tag @param references unknown parameter: $roles                                                                   
+         🪪  parameter.notFound                                                                                                   
+ ------ ------------------------------------------------------------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------------------------------------------------------------- 
+  Line   src/repositories/ApplicationRepository.php                                                                                   
+ ------ ----------------------------------------------------------------------------------------------------------------------------- 
+  8      Class src\repositories\ApplicationRepository extends unknown class src\repositories\Repository.                              
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                                                          
+  13     src\repositories\ApplicationRepository::__construct() calls parent::__construct() but                                        
+         src\repositories\ApplicationRepository does not extend any class.                                                            
+         🪪  class.noParent                                                                                                           
+  18     PHPDoc tag @param has invalid value (int user_id): Unexpected token "user_id", expected variable at offset 76 on line 3      
+         🪪  phpDoc.parseError                                                                                                        
+  19     PHPDoc tag @param has invalid value (int page): Unexpected token "page", expected variable at offset 102 on line 4           
+         🪪  phpDoc.parseError                                                                                                        
+  20     PHPDoc tag @return has invalid value ([ApplicationDao, PaginationMetaDao] array): Unexpected token "[", expected type at     
+         offset 122 on line 5                                                                                                         
+         🪪  phpDoc.parseError                                                                                                        
+  22     Method src\repositories\ApplicationRepository::getUserApplications() return type has no value type specified in iterable     
+         type array.                                                                                                                  
+         🪪  missingType.iterableValue                                                                                                
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                    
+  30     Access to an undefined property src\repositories\ApplicationRepository::$db.                                                 
+         🪪  property.notFound                                                                                                        
+         💡 Learn more: https://phpstan.org/blog/solving-phpstan-access-to-undefined-property                                         
+  51     Access to an undefined property src\repositories\ApplicationRepository::$db.                                                 
+         🪪  property.notFound                                                                                                        
+         💡 Learn more: https://phpstan.org/blog/solving-phpstan-access-to-undefined-property                                         
+  68     Parameter #1 $currentPage of class src\dao\PaginationMetaDao constructor expects int, float|int given.                       
+         🪪  argument.type                                                                                                            
+  76     Method src\repositories\ApplicationRepository::getAllJobApplicationsUnpaginated() return type has no value type specified    
+         in iterable type array.                                                                                                      
+         🪪  missingType.iterableValue                                                                                                
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                    
+  92     Access to an undefined property src\repositories\ApplicationRepository::$db.                                                 
+         🪪  property.notFound                                                                                                        
+         💡 Learn more: https://phpstan.org/blog/solving-phpstan-access-to-undefined-property                                         
+  110    PHPDoc tag @param has invalid value (int job_id): Unexpected token "job_id", expected variable at offset 74 on line 3        
+         🪪  phpDoc.parseError                                                                                                        
+  111    PHPDoc tag @param has invalid value (int page): Unexpected token "page", expected variable at offset 99 on line 4            
+         🪪  phpDoc.parseError                                                                                                        
+  112    PHPDoc tag @param has invalid value (int limit): Unexpected token "limit", expected variable at offset 122 on line 5         
+         🪪  phpDoc.parseError                                                                                                        
+  113    PHPDoc tag @return has invalid value ([ApplicationDao, PaginationMetaDao] array): Unexpected token "[", expected type at     
+         offset 143 on line 6                                                                                                         
+         🪪  phpDoc.parseError                                                                                                        
+  115    Method src\repositories\ApplicationRepository::getJobApplications() return type has no value type specified in iterable      
+         type array.                                                                                                                  
+         🪪  missingType.iterableValue                                                                                                
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                    
+  123    Access to an undefined property src\repositories\ApplicationRepository::$db.                                                 
+         🪪  property.notFound                                                                                                        
+         💡 Learn more: https://phpstan.org/blog/solving-phpstan-access-to-undefined-property                                         
+  143    Access to an undefined property src\repositories\ApplicationRepository::$db.                                                 
+         🪪  property.notFound                                                                                                        
+         💡 Learn more: https://phpstan.org/blog/solving-phpstan-access-to-undefined-property                                         
+  158    Parameter #1 $currentPage of class src\dao\PaginationMetaDao constructor expects int, float|int given.                       
+         🪪  argument.type                                                                                                            
+  165    PHPDoc tag @param has invalid value (int application_id): Unexpected token "application_id", expected variable at offset 81  
+         on line 3                                                                                                                    
+         🪪  phpDoc.parseError                                                                                                        
+  181    Access to an undefined property src\repositories\ApplicationRepository::$db.                                                 
+         🪪  property.notFound                                                                                                        
+         💡 Learn more: https://phpstan.org/blog/solving-phpstan-access-to-undefined-property                                         
+  212    Access to an undefined property src\repositories\ApplicationRepository::$db.                                                 
+         🪪  property.notFound                                                                                                        
+         💡 Learn more: https://phpstan.org/blog/solving-phpstan-access-to-undefined-property                                         
+  224    PHPDoc tag @param has invalid value (ApplicationDao application): Unexpected token "application", expected variable at       
+         offset 71 on line 3                                                                                                          
+         🪪  phpDoc.parseError                                                                                                        
+  236    Access to an undefined property src\repositories\ApplicationRepository::$db.                                                 
+         🪪  property.notFound                                                                                                        
+         💡 Learn more: https://phpstan.org/blog/solving-phpstan-access-to-undefined-property                                         
+  243    PHPDoc tag @param has invalid value (int user_id): Unexpected token "user_id", expected variable at offset 45 on line 3      
+         🪪  phpDoc.parseError                                                                                                        
+  244    PHPDoc tag @param has invalid value (int job_id): Unexpected token "job_id", expected variable at offset 71 on line 4        
+         🪪  phpDoc.parseError                                                                                                        
+  245    PHPDoc tag @param has invalid value (string cv): Unexpected token "cv", expected variable at offset 99 on line 5             
+         🪪  phpDoc.parseError                                                                                                        
+  246    PHPDoc tag @param has invalid value (string video): Unexpected token "video", expected variable at offset 123 on line 6      
+         🪪  phpDoc.parseError                                                                                                        
+  249    PHPDoc tag @return with type void is incompatible with native type src\dao\ApplicationDao.                                   
+         🪪  return.phpDocType                                                                                                        
+  259    Access to an undefined property src\repositories\ApplicationRepository::$db.                                                 
+         🪪  property.notFound                                                                                                        
+         💡 Learn more: https://phpstan.org/blog/solving-phpstan-access-to-undefined-property                                         
+ ------ ----------------------------------------------------------------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------------------------------------------------------------- 
+  Line   src/repositories/JobRepository.php                                                                                           
+ ------ ----------------------------------------------------------------------------------------------------------------------------- 
+  15     Class src\repositories\JobRepository extends unknown class src\repositories\Repository.                                      
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                                                          
+  20     src\repositories\JobRepository::__construct() calls parent::__construct() but src\repositories\JobRepository does not        
+         extend any class.                                                                                                            
+         🪪  class.noParent                                                                                                           
+  31     PHPDoc tag @return has invalid value ([jobs, attachments] - The new job and attachments): Unexpected token "[", expected     
+         type at offset 381 on line 9                                                                                                 
+         🪪  phpDoc.parseError                                                                                                        
+  33     Method src\repositories\JobRepository::createJobAndAttachments() has parameter $attachmentPaths with no value type           
+         specified in iterable type array.                                                                                            
+         🪪  missingType.iterableValue                                                                                                
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                    
+  33     Method src\repositories\JobRepository::createJobAndAttachments() return type has no value type specified in iterable type    
+         array.                                                                                                                       
+         🪪  missingType.iterableValue                                                                                                
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                    
+  33     PHPDoc tag @param for parameter $position with type int is incompatible with native type string.                             
+         🪪  parameter.phpDocType                                                                                                     
+  33     PHPDoc tag @throws with type src\repositories\PdoException is not subtype of Throwable                                       
+         🪪  throws.notThrowable                                                                                                      
+  37     Access to an undefined property src\repositories\JobRepository::$db.                                                         
+         🪪  property.notFound                                                                                                        
+         💡 Learn more: https://phpstan.org/blog/solving-phpstan-access-to-undefined-property                                         
+  46     Access to an undefined property src\repositories\JobRepository::$db.                                                         
+         🪪  property.notFound                                                                                                        
+         💡 Learn more: https://phpstan.org/blog/solving-phpstan-access-to-undefined-property                                         
+  48     Access to an undefined property src\repositories\JobRepository::$db.                                                         
+         🪪  property.notFound                                                                                                        
+         💡 Learn more: https://phpstan.org/blog/solving-phpstan-access-to-undefined-property                                         
+  59     PHPDoc tag @param has invalid value (?array isOpens - The job is open or not): Unexpected token "isOpens", expected          
+         variable at offset 183 on line 5                                                                                             
+         🪪  phpDoc.parseError                                                                                                        
+  60     PHPDoc tag @param has invalid value (?array jobTypes - The job types): Unexpected token "jobTypes", expected variable at     
+         offset 237 on line 6                                                                                                         
+         🪪  phpDoc.parseError                                                                                                        
+  61     PHPDoc tag @param has invalid value (?array locationTypes - The location types): Unexpected token "locationTypes", expected  
+         variable at offset 283 on line 7                                                                                             
+         🪪  phpDoc.parseError                                                                                                        
+  62     PHPDoc tag @param has invalid value (?DateTime createdAtFrom - The start date): Unexpected token "createdAtFrom", expected   
+         variable at offset 342 on line 8                                                                                             
+         🪪  phpDoc.parseError                                                                                                        
+  63     PHPDoc tag @param has invalid value (?DateTime createdAtTo - The end date): Unexpected token "createdAtTo", expected         
+         variable at offset 397 on line 9                                                                                             
+         🪪  phpDoc.parseError                                                                                                        
+  64     PHPDoc tag @param has invalid value (?string search - The search string): Unexpected token "search", expected variable at    
+         offset 446 on line 10                                                                                                        
+         🪪  phpDoc.parseError                                                                                                        
+  65     PHPDoc tag @param has invalid value (bool isCreatedAtAsc - The order of created at): Unexpected token "isCreatedAtAsc",      
+         expected variable at offset 492 on line 11                                                                                   
+         🪪  phpDoc.parseError                                                                                                        
+  66     PHPDoc tag @param has invalid value (?int page - The page): Unexpected token "page", expected variable at offset 552 on      
+         line 12                                                                                                                      
+         🪪  phpDoc.parseError                                                                                                        
+  67     PHPDoc tag @param has invalid value (?int limit - The limit): Unexpected token "limit", expected variable at offset 587 on   
+         line 13                                                                                                                      
+         🪪  phpDoc.parseError                                                                                                        
+  70     Method src\repositories\JobRepository::getJobsWithFilter() has parameter $jobTypes with no value type specified in iterable  
+         type array.                                                                                                                  
+         🪪  missingType.iterableValue                                                                                                
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                    
+  70     Method src\repositories\JobRepository::getJobsWithFilter() has parameter $locationTypes with no value type specified in      
+         iterable type array.                                                                                                         
+         🪪  missingType.iterableValue                                                                                                
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                    
+  70     Method src\repositories\JobRepository::getJobsWithFilter() return type has no value type specified in iterable type array.   
+         🪪  missingType.iterableValue                                                                                                
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                    
+  113    Variable $conditions in empty() always exists and is not falsy.                                                              
+         🪪  empty.variable                                                                                                           
+  119    Access to an undefined property src\repositories\JobRepository::$db.                                                         
+         🪪  property.notFound                                                                                                        
+         💡 Learn more: https://phpstan.org/blog/solving-phpstan-access-to-undefined-property                                         
+  131    Access to an undefined property src\repositories\JobRepository::$db.                                                         
+         🪪  property.notFound                                                                                                        
+         💡 Learn more: https://phpstan.org/blog/solving-phpstan-access-to-undefined-property                                         
+  144    Parameter #1 $currentPage of class src\dao\PaginationMetaDao constructor expects int, float|int given.                       
+         🪪  argument.type                                                                                                            
+  152    PHPDoc tag @param has invalid value (?array isOpens - The job is open or not): Unexpected token "isOpens", expected          
+         variable at offset 96 on line 4                                                                                              
+         🪪  phpDoc.parseError                                                                                                        
+  153    PHPDoc tag @param has invalid value (?array jobTypes - The job types): Unexpected token "jobTypes", expected variable at     
+         offset 150 on line 5                                                                                                         
+         🪪  phpDoc.parseError                                                                                                        
+  154    PHPDoc tag @param has invalid value (?array locationTypes - The location types): Unexpected token "locationTypes", expected  
+         variable at offset 196 on line 6                                                                                             
+         🪪  phpDoc.parseError                                                                                                        
+  155    PHPDoc tag @param has invalid value (?DateTime createdAtFrom - The start date): Unexpected token "createdAtFrom", expected   
+         variable at offset 255 on line 7                                                                                             
+         🪪  phpDoc.parseError                                                                                                        
+  156    PHPDoc tag @param has invalid value (?DateTime createdAtTo - The end date): Unexpected token "createdAtTo", expected         
+         variable at offset 310 on line 8                                                                                             
+         🪪  phpDoc.parseError                                                                                                        
+  157    PHPDoc tag @param has invalid value (?string search - The search string): Unexpected token "search", expected variable at    
+         offset 359 on line 9                                                                                                         
+         🪪  phpDoc.parseError                                                                                                        
+  158    PHPDoc tag @param has invalid value (bool isCreatedAtAsc - The order of created at): Unexpected token "isCreatedAtAsc",      
+         expected variable at offset 405 on line 10                                                                                   
+         🪪  phpDoc.parseError                                                                                                        
+  159    PHPDoc tag @param has invalid value (?int page - The page): Unexpected token "page", expected variable at offset 465 on      
+         line 11                                                                                                                      
+         🪪  phpDoc.parseError                                                                                                        
+  160    PHPDoc tag @param has invalid value (?int limit - The limit): Unexpected token "limit", expected variable at offset 500 on   
+         line 12                                                                                                                      
+         🪪  phpDoc.parseError                                                                                                        
+  163    Method src\repositories\JobRepository::getCompanyJobsWithFilter() has parameter $isOpens with no value type specified in     
+         iterable type array.                                                                                                         
+         🪪  missingType.iterableValue                                                                                                
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                    
+  163    Method src\repositories\JobRepository::getCompanyJobsWithFilter() has parameter $jobTypes with no value type specified in    
+         iterable type array.                                                                                                         
+         🪪  missingType.iterableValue                                                                                                
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                    
+  163    Method src\repositories\JobRepository::getCompanyJobsWithFilter() has parameter $locationTypes with no value type specified  
+         in iterable type array.                                                                                                      
+         🪪  missingType.iterableValue                                                                                                
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                    
+  163    Method src\repositories\JobRepository::getCompanyJobsWithFilter() return type has no value type specified in iterable type   
+         array.                                                                                                                       
+         🪪  missingType.iterableValue                                                                                                
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                    
+  227    Access to an undefined property src\repositories\JobRepository::$db.                                                         
+         🪪  property.notFound                                                                                                        
+         💡 Learn more: https://phpstan.org/blog/solving-phpstan-access-to-undefined-property                                         
+  239    Access to an undefined property src\repositories\JobRepository::$db.                                                         
+         🪪  property.notFound                                                                                                        
+         💡 Learn more: https://phpstan.org/blog/solving-phpstan-access-to-undefined-property                                         
+  248    Parameter #1 $currentPage of class src\dao\PaginationMetaDao constructor expects int, float|int given.                       
+         🪪  argument.type                                                                                                            
+  260    Method src\repositories\JobRepository::editJobAndCreateAttachments() has parameter $attachmentPaths with no value type       
+         specified in iterable type array.                                                                                            
+         🪪  missingType.iterableValue                                                                                                
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                    
+  260    Method src\repositories\JobRepository::editJobAndCreateAttachments() return type has no value type specified in iterable     
+         type array.                                                                                                                  
+         🪪  missingType.iterableValue                                                                                                
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                    
+  260    PHPDoc tag @throws with type src\repositories\PdoException is not subtype of Throwable                                       
+         🪪  throws.notThrowable                                                                                                      
+  264    Access to an undefined property src\repositories\JobRepository::$db.                                                         
+         🪪  property.notFound                                                                                                        
+         💡 Learn more: https://phpstan.org/blog/solving-phpstan-access-to-undefined-property                                         
+  270    Access to an undefined property src\repositories\JobRepository::$db.                                                         
+         🪪  property.notFound                                                                                                        
+         💡 Learn more: https://phpstan.org/blog/solving-phpstan-access-to-undefined-property                                         
+  272    Access to an undefined property src\repositories\JobRepository::$db.                                                         
+         🪪  property.notFound                                                                                                        
+         💡 Learn more: https://phpstan.org/blog/solving-phpstan-access-to-undefined-property                                         
+  287    Access to an undefined property src\repositories\JobRepository::$db.                                                         
+         🪪  property.notFound                                                                                                        
+         💡 Learn more: https://phpstan.org/blog/solving-phpstan-access-to-undefined-property                                         
+  301    PHPDoc tag @param for parameter $locationType with type src\repositories\LcoationType is not subtype of native type          
+         src\dao\LocationType.                                                                                                        
+         🪪  parameter.phpDocType                                                                                                     
+  301    PHPDoc tag @param for parameter $position with type int is incompatible with native type string.                             
+         🪪  parameter.phpDocType                                                                                                     
+  301    PHPDoc tag @throws with type src\repositories\PdoException is not subtype of Throwable                                       
+         🪪  throws.notThrowable                                                                                                      
+  301    Parameter $locationType of method src\repositories\JobRepository::createJob() has invalid type                               
+         src\repositories\LcoationType.                                                                                               
+         🪪  class.notFound                                                                                                           
+  312    Access to an undefined property src\repositories\JobRepository::$db.                                                         
+         🪪  property.notFound                                                                                                        
+         💡 Learn more: https://phpstan.org/blog/solving-phpstan-access-to-undefined-property                                         
+  323    Access to an undefined property src\repositories\JobRepository::$db.                                                         
+         🪪  property.notFound                                                                                                        
+         💡 Learn more: https://phpstan.org/blog/solving-phpstan-access-to-undefined-property                                         
+  352    PHPDoc tag @throws with type src\repositories\PdoException is not subtype of Throwable                                       
+         🪪  throws.notThrowable                                                                                                      
+  364    Access to an undefined property src\repositories\JobRepository::$db.                                                         
+         🪪  property.notFound                                                                                                        
+         💡 Learn more: https://phpstan.org/blog/solving-phpstan-access-to-undefined-property                                         
+  374    PHPDoc tag @throws with type src\repositories\PdoException is not subtype of Throwable                                       
+         🪪  throws.notThrowable                                                                                                      
+  378    Access to an undefined property src\repositories\JobRepository::$db.                                                         
+         🪪  property.notFound                                                                                                        
+         💡 Learn more: https://phpstan.org/blog/solving-phpstan-access-to-undefined-property                                         
+  384    PHPDoc tag @param has invalid value (jobId - The job id to attach the files to): Unexpected token "-", expected variable at  
+         offset 54 on line 3                                                                                                          
+         🪪  phpDoc.parseError                                                                                                        
+  395    Access to an undefined property src\repositories\JobRepository::$db.                                                         
+         🪪  property.notFound                                                                                                        
+         💡 Learn more: https://phpstan.org/blog/solving-phpstan-access-to-undefined-property                                         
+  411    Access to an undefined property src\repositories\JobRepository::$db.                                                         
+         🪪  property.notFound                                                                                                        
+         💡 Learn more: https://phpstan.org/blog/solving-phpstan-access-to-undefined-property                                         
+  427    PHPDoc tag @throws with type src\repositories\PdoException is not subtype of Throwable                                       
+         🪪  throws.notThrowable                                                                                                      
+  431    Access to an undefined property src\repositories\JobRepository::$db.                                                         
+         🪪  property.notFound                                                                                                        
+         💡 Learn more: https://phpstan.org/blog/solving-phpstan-access-to-undefined-property                                         
+  441    Access to an undefined property src\repositories\JobRepository::$db.                                                         
+         🪪  property.notFound                                                                                                        
+         💡 Learn more: https://phpstan.org/blog/solving-phpstan-access-to-undefined-property                                         
+  455    PHPDoc tag @throws with type src\repositories\PdoException is not subtype of Throwable                                       
+         🪪  throws.notThrowable                                                                                                      
+  459    Access to an undefined property src\repositories\JobRepository::$db.                                                         
+         🪪  property.notFound                                                                                                        
+         💡 Learn more: https://phpstan.org/blog/solving-phpstan-access-to-undefined-property                                         
+  462    Method src\repositories\JobRepository::selectJobSuggestion() return type has no value type specified in iterable type        
+         array.                                                                                                                       
+         🪪  missingType.iterableValue                                                                                                
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                    
+  494    Access to an undefined property src\repositories\JobRepository::$db.                                                         
+         🪪  property.notFound                                                                                                        
+         💡 Learn more: https://phpstan.org/blog/solving-phpstan-access-to-undefined-property                                         
+ ------ ----------------------------------------------------------------------------------------------------------------------------- 
+
+ ------ ------------------------------------------------------------------------------------------------------------------------- 
+  Line   src/repositories/UserRepository.php                                                                                      
+ ------ ------------------------------------------------------------------------------------------------------------------------- 
+  15     Class src\repositories\UserRepository extends unknown class src\repositories\Repository.                                 
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                                                      
+  19     src\repositories\UserRepository::__construct() calls parent::__construct() but src\repositories\UserRepository does not  
+         extend any class.                                                                                                        
+         🪪  class.noParent                                                                                                       
+  29     Access to an undefined property src\repositories\UserRepository::$db.                                                    
+         🪪  property.notFound                                                                                                    
+         💡 Learn more: https://phpstan.org/blog/solving-phpstan-access-to-undefined-property                                     
+  46     Access to an undefined property src\repositories\UserRepository::$db.                                                    
+         🪪  property.notFound                                                                                                    
+         💡 Learn more: https://phpstan.org/blog/solving-phpstan-access-to-undefined-property                                     
+  74     Access to an undefined property src\repositories\UserRepository::$db.                                                    
+         🪪  property.notFound                                                                                                    
+         💡 Learn more: https://phpstan.org/blog/solving-phpstan-access-to-undefined-property                                     
+  104    Access to an undefined property src\repositories\UserRepository::$db.                                                    
+         🪪  property.notFound                                                                                                    
+         💡 Learn more: https://phpstan.org/blog/solving-phpstan-access-to-undefined-property                                     
+  107    Access to an undefined property src\repositories\UserRepository::$db.                                                    
+         🪪  property.notFound                                                                                                    
+         💡 Learn more: https://phpstan.org/blog/solving-phpstan-access-to-undefined-property                                     
+  108    Access to an undefined property src\repositories\UserRepository::$db.                                                    
+         🪪  property.notFound                                                                                                    
+         💡 Learn more: https://phpstan.org/blog/solving-phpstan-access-to-undefined-property                                     
+  111    Access to an undefined property src\repositories\UserRepository::$db.                                                    
+         🪪  property.notFound                                                                                                    
+         💡 Learn more: https://phpstan.org/blog/solving-phpstan-access-to-undefined-property                                     
+  114    Access to an undefined property src\repositories\UserRepository::$db.                                                    
+         🪪  property.notFound                                                                                                    
+         💡 Learn more: https://phpstan.org/blog/solving-phpstan-access-to-undefined-property                                     
+  133    Access to an undefined property src\repositories\UserRepository::$db.                                                    
+         🪪  property.notFound                                                                                                    
+         💡 Learn more: https://phpstan.org/blog/solving-phpstan-access-to-undefined-property                                     
+  142    Access to an undefined property src\repositories\UserRepository::$db.                                                    
+         🪪  property.notFound                                                                                                    
+         💡 Learn more: https://phpstan.org/blog/solving-phpstan-access-to-undefined-property                                     
+  156    Access to an undefined property src\repositories\UserRepository::$db.                                                    
+         🪪  property.notFound                                                                                                    
+         💡 Learn more: https://phpstan.org/blog/solving-phpstan-access-to-undefined-property                                     
+  168    Access to an undefined property src\repositories\UserRepository::$db.                                                    
+         🪪  property.notFound                                                                                                    
+         💡 Learn more: https://phpstan.org/blog/solving-phpstan-access-to-undefined-property                                     
+  172    Access to an undefined property src\repositories\UserRepository::$db.                                                    
+         🪪  property.notFound                                                                                                    
+         💡 Learn more: https://phpstan.org/blog/solving-phpstan-access-to-undefined-property                                     
+  175    Access to an undefined property src\repositories\UserRepository::$db.                                                    
+         🪪  property.notFound                                                                                                    
+         💡 Learn more: https://phpstan.org/blog/solving-phpstan-access-to-undefined-property                                     
+ ------ ------------------------------------------------------------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------------------------------------------------------------- 
+  Line   src/services/CompanyService.php                                                                                              
+ ------ ----------------------------------------------------------------------------------------------------------------------------- 
+  35     PHPDoc tag @throws with type src\services\HttpException is not subtype of Throwable                                          
+         🪪  throws.notThrowable                                                                                                      
+  57     Method src\services\CompanyService::getCompanyJobApplicationCSVData() has no return type specified.                          
+         🪪  missingType.return                                                                                                       
+  130    PHPDoc tag @throws with type src\services\HttpException is not subtype of Throwable                                          
+         🪪  throws.notThrowable                                                                                                      
+  169    PHPDoc tag @return has invalid value ([job, attachments] - The new job and attachments): Unexpected token "[", expected      
+         type at offset 460 on line 10                                                                                                
+         🪪  phpDoc.parseError                                                                                                        
+  171    Method src\services\CompanyService::createJob() has parameter $rawAttachments with no value type specified in iterable type  
+         array.                                                                                                                       
+         🪪  missingType.iterableValue                                                                                                
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                    
+  171    Method src\services\CompanyService::createJob() return type has no value type specified in iterable type array.              
+         🪪  missingType.iterableValue                                                                                                
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                    
+  171    PHPDoc tag @param for parameter $userId with type string is incompatible with native type int.                               
+         🪪  parameter.phpDocType                                                                                                     
+  171    PHPDoc tag @throws with type src\services\HttpException is not subtype of Throwable                                          
+         🪪  throws.notThrowable                                                                                                      
+  210    PHPDoc tag @param for parameter $jobId with type string is incompatible with native type int.                                
+         🪪  parameter.phpDocType                                                                                                     
+  210    PHPDoc tag @throws with type src\services\HttpException is not subtype of Throwable                                          
+         🪪  throws.notThrowable                                                                                                      
+  231    Method src\services\CompanyService::getCompanyJobs() has parameter $isOpens with no value type specified in iterable type    
+         array.                                                                                                                       
+         🪪  missingType.iterableValue                                                                                                
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                    
+  231    Method src\services\CompanyService::getCompanyJobs() has parameter $jobTypes with no value type specified in iterable type   
+         array.                                                                                                                       
+         🪪  missingType.iterableValue                                                                                                
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                    
+  231    Method src\services\CompanyService::getCompanyJobs() has parameter $locationTypes with no value type specified in iterable   
+         type array.                                                                                                                  
+         🪪  missingType.iterableValue                                                                                                
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                    
+  231    Method src\services\CompanyService::getCompanyJobs() return type has no value type specified in iterable type array.         
+         🪪  missingType.iterableValue                                                                                                
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                    
+  238    Parameter #9 $page of method src\repositories\JobRepository::getCompanyJobsWithFilter() expects int, int|null given.         
+         🪪  argument.type                                                                                                            
+  275    PHPDoc tag @param has invalid value (int job_id): Unexpected token "job_id", expected variable at offset 74 on line 3        
+         🪪  phpDoc.parseError                                                                                                        
+  276    PHPDoc tag @param has invalid value (int page): Unexpected token "page", expected variable at offset 99 on line 4            
+         🪪  phpDoc.parseError                                                                                                        
+  278    Method src\services\CompanyService::getCompanyJobApplications() return type has no value type specified in iterable type     
+         array.                                                                                                                       
+         🪪  missingType.iterableValue                                                                                                
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                    
+  324    PHPDoc tag @return has invalid value ([job, attachments] - The edited job and attachments): Unexpected token "[", expected   
+         type at offset 512 on line 12                                                                                                
+         🪪  phpDoc.parseError                                                                                                        
+  326    Method src\services\CompanyService::editJob() has parameter $attachments with no value type specified in iterable type       
+         array.                                                                                                                       
+         🪪  missingType.iterableValue                                                                                                
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                    
+  326    Method src\services\CompanyService::editJob() return type has no value type specified in iterable type array.                
+         🪪  missingType.iterableValue                                                                                                
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                    
+  326    PHPDoc tag @param for parameter $currentUserId with type string is incompatible with native type int.                        
+         🪪  parameter.phpDocType                                                                                                     
+  326    PHPDoc tag @param for parameter $jobId with type string is incompatible with native type int.                                
+         🪪  parameter.phpDocType                                                                                                     
+  326    PHPDoc tag @throws with type src\services\HttpException is not subtype of Throwable                                          
+         🪪  throws.notThrowable                                                                                                      
+  390    PHPDoc tag @param for parameter $applicationId with type string is incompatible with native type int.                        
+         🪪  parameter.phpDocType                                                                                                     
+  390    PHPDoc tag @param for parameter $currentUserId with type string is incompatible with native type int.                        
+         🪪  parameter.phpDocType                                                                                                     
+  430    PHPDoc tag @param for parameter $currentUserId with type string is incompatible with native type int.                        
+         🪪  parameter.phpDocType                                                                                                     
+  430    PHPDoc tag @param for parameter $jobId with type string is incompatible with native type int.                                
+         🪪  parameter.phpDocType                                                                                                     
+ ------ ----------------------------------------------------------------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------------------------------------------------------------- 
+  Line   src/services/JobService.php                                                                                                  
+ ------ ----------------------------------------------------------------------------------------------------------------------------- 
+  37     Method src\services\JobService::getJobs() has parameter $jobTypes with no value type specified in iterable type array.       
+         🪪  missingType.iterableValue                                                                                                
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                    
+  37     Method src\services\JobService::getJobs() has parameter $locationTypes with no value type specified in iterable type array.  
+         🪪  missingType.iterableValue                                                                                                
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                    
+  37     Method src\services\JobService::getJobs() return type has no value type specified in iterable type array.                    
+         🪪  missingType.iterableValue                                                                                                
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                    
+  44     Parameter #7 $page of method src\repositories\JobRepository::getJobsWithFilter() expects int, int|null given.                
+         🪪  argument.type                                                                                                            
+  56     Method src\services\JobService::getJobDetail() has no return type specified.                                                 
+         🪪  missingType.return                                                                                                       
+  79     Parameter #1 $companyDetail of method src\dao\JobDao::setCompanyDetail() expects src\dao\CompanyDetailDao,                   
+         src\dao\CompanyDetailDao|null given.                                                                                         
+         🪪  argument.type                                                                                                            
+  153    Method src\services\JobService::applyJob() has parameter $rawCv with no value type specified in iterable type array.         
+         🪪  missingType.iterableValue                                                                                                
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                    
+  153    Method src\services\JobService::applyJob() has parameter $rawVideo with no value type specified in iterable type array.      
+         🪪  missingType.iterableValue                                                                                                
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                    
+  153    PHPDoc tag @param references unknown parameter: $cv                                                                          
+         🪪  parameter.notFound                                                                                                       
+  153    PHPDoc tag @param references unknown parameter: $video                                                                       
+         🪪  parameter.notFound                                                                                                       
+  153    PHPDoc tag @return with type string is incompatible with native type void.                                                   
+         🪪  return.phpDocType                                                                                                        
+  199    Method src\services\JobService::getApplicationsHistory() return type has no value type specified in iterable type array.     
+         🪪  missingType.iterableValue                                                                                                
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                    
+  218    Method src\services\JobService::getJobsSuggestion() return type has no value type specified in iterable type array.          
+         🪪  missingType.iterableValue                                                                                                
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                    
+  221    Parameter #1 $email of method src\repositories\UserRepository::findUserByEmail() expects string, string|null given.          
+         🪪  argument.type                                                                                                            
+  224    Cannot call method getId() on src\dao\UserDao|null.                                                                          
+         🪪  method.nonObject                                                                                                         
+  232    Variable $jobs on left side of ?? always exists and is not nullable.                                                         
+         🪪  nullCoalesce.variable                                                                                                    
+ ------ ----------------------------------------------------------------------------------------------------------------------------- 
+
+ ------ ---------------------------------------------------------------------------------------------------------------------------- 
+  Line   src/services/UploadService.php                                                                                              
+ ------ ---------------------------------------------------------------------------------------------------------------------------- 
+  14     PHPDoc tag @param has invalid value (directoryFromPublic: target directory to upload the file): Unexpected token ":",       
+         expected variable at offset 89 on line 3                                                                                    
+         🪪  phpDoc.parseError                                                                                                       
+  15     PHPDoc tag @param has invalid value (file: file array): Unexpected token ":", expected variable at offset 145 on line 4     
+         🪪  phpDoc.parseError                                                                                                       
+  16     PHPDoc tag @return has invalid value (string: the file directory from the public directory                                  
+         I.S. file is already validated at the start of controller                                                                   
+         F.S. file is uploaded to the target directory): Unexpected token ":", expected TOKEN_HORIZONTAL_WS at offset 180 on line 5  
+         🪪  phpDoc.parseError                                                                                                       
+  20     Method src\services\UploadService::uploadOneFile() has parameter $normalizedFile with no value type specified in iterable   
+         type array.                                                                                                                 
+         🪪  missingType.iterableValue                                                                                               
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                   
+  51     PHPDoc tag @param has invalid value (directoryFromPublic: target directory to upload the file): Unexpected token ":",       
+         expected variable at offset 97 on line 3                                                                                    
+         🪪  phpDoc.parseError                                                                                                       
+  52     PHPDoc tag @param has invalid value (rawFiles: raw files array): Unexpected token ":", expected variable at offset 157 on   
+         line 4                                                                                                                      
+         🪪  phpDoc.parseError                                                                                                       
+  54     Method src\services\UploadService::uploadMultipleFiles() has parameter $rawFiles with no value type specified in iterable   
+         type array.                                                                                                                 
+         🪪  missingType.iterableValue                                                                                               
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                   
+  54     Method src\services\UploadService::uploadMultipleFiles() return type has no value type specified in iterable type array.    
+         🪪  missingType.iterableValue                                                                                               
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                   
+  74     PHPDoc tag @param has invalid value (fileDirectoryFromPublic: file directory from the public directory): Unexpected token   
+         ":", expected variable at offset 89 on line 3                                                                               
+         🪪  phpDoc.parseError                                                                                                       
+  76     Method src\services\UploadService::deleteOneFile() has no return type specified.                                            
+         🪪  missingType.return                                                                                                      
+  91     PHPDoc tag @param has invalid value (fileDirectoriesFromPublic: file directories from the public directory): Unexpected     
+         token ":", expected variable at offset 99 on line 3                                                                         
+         🪪  phpDoc.parseError                                                                                                       
+  93     Method src\services\UploadService::deleteMultipleFiles() has no return type specified.                                      
+         🪪  missingType.return                                                                                                      
+  93     Method src\services\UploadService::deleteMultipleFiles() has parameter $fileDirectoriesFromPublic with no value type        
+         specified in iterable type array.                                                                                           
+         🪪  missingType.iterableValue                                                                                               
+         💡 See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type                                   
+ ------ ---------------------------------------------------------------------------------------------------------------------------- 
+
+ ------ ---------------------------------------------------------------------------------- 
+  Line   src/services/UserService.php                                                      
+ ------ ---------------------------------------------------------------------------------- 
+  16     Property src\services\UserService::$userRepository is never read, only written.   
+         🪪  property.onlyWritten                                                          
+         💡 See: https://phpstan.org/developing-extensions/always-read-written-properties  
+ ------ ---------------------------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------------------------------------------------------------------------------- 
+  Line   src/utils/Autoloader.php                                                                                                     
+ ------ ----------------------------------------------------------------------------------------------------------------------------- 
+  10     Method src\utils\Autoloader::register() has no return type specified.                                                        
+         🪪  missingType.return                                                                                                       
+  12     Parameter #1 $callback of function spl_autoload_register expects (callable(string): void)|null, Closure(mixed): bool given.  
+         🪪  argument.type                                                                                                            
+ ------ ----------------------------------------------------------------------------------------------------------------------------- 
+
+ ------ ---------------------------------------------------------------------------------------- 
+  Line   src/utils/PathResolver.php                                                              
+ ------ ---------------------------------------------------------------------------------------- 
+  16     Method src\utils\PathResolver::resolve() should return string but returns string|null.  
+         🪪  return.type                                                                         
+ ------ ---------------------------------------------------------------------------------------- 
+
+ ------ ---------------------------------------------------------------------------------------------------------------------------- 
+  Line   src/utils/UserSession.php                                                                                                   
+ ------ ---------------------------------------------------------------------------------------------------------------------------- 
+  25     PHPDoc tag @param has invalid value (user: UserDao object): Unexpected token ":", expected variable at offset 50 on line 3  
+         🪪  phpDoc.parseError                                                                                                       
+  90     Parameter #1 $name of function setcookie expects string, string|false given.                                                
+         🪪  argument.type                                                                                                           
+ ------ ---------------------------------------------------------------------------------------------------------------------------- 
+
+ ------ ---------------------------------------------------------------------------------- 
+  Line   src/utils/Utils.php                                                               
+ ------ ---------------------------------------------------------------------------------- 
+  10     Method src\utils\Utils::isInteger() has no return type specified.                 
+         🪪  missingType.return                                                            
+  10     Method src\utils\Utils::isInteger() has parameter $value with no type specified.  
+         🪪  missingType.parameter                                                         
+ ------ ---------------------------------------------------------------------------------- 
+
+ ------ --------------------------------------------------------------------------------------- 
+  Line   src/utils/Validator.php                                                                
+ ------ --------------------------------------------------------------------------------------- 
+  8      Property src\utils\Validator::$errorFields has no type specified.                      
+         🪪  missingType.property                                                               
+  13     Method src\utils\Validator::validate() has no return type specified.                   
+         🪪  missingType.return                                                                 
+  13     Method src\utils\Validator::validate() has parameter $data with no type specified.     
+         🪪  missingType.parameter                                                              
+  13     Method src\utils\Validator::validate() has parameter $rules with no type specified.    
+         🪪  missingType.parameter                                                              
+  144    Method src\utils\Validator::addError() has no return type specified.                   
+         🪪  missingType.return                                                                 
+  144    Method src\utils\Validator::addError() has parameter $field with no type specified.    
+         🪪  missingType.parameter                                                              
+  144    Method src\utils\Validator::addError() has parameter $message with no type specified.  
+         🪪  missingType.parameter                                                              
+  149    Method src\utils\Validator::getErrorFields() has no return type specified.             
+         🪪  missingType.return                                                                 
+ ------ --------------------------------------------------------------------------------------- 
+
+ ------ --------------------------------------------------------------------------------------------------------------------------- 
+  Line   src/views/components/PaginationComponent.php                                                                               
+ ------ --------------------------------------------------------------------------------------------------------------------------- 
+  9      Method src\views\components\PaginationComponent::renderPagination() has no return type specified.                          
+         🪪  missingType.return                                                                                                     
+  9      Method src\views\components\PaginationComponent::renderPagination() has parameter $currentUri with no type specified.      
+         🪪  missingType.parameter                                                                                                  
+  77     Method src\views\components\PaginationComponent::buildUrl() has no return type specified.                                  
+         🪪  missingType.return                                                                                                     
+  77     Method src\views\components\PaginationComponent::buildUrl() has parameter $baseUrl with no type specified.                 
+         🪪  missingType.parameter                                                                                                  
+  77     Method src\views\components\PaginationComponent::buildUrl() has parameter $page with no type specified.                    
+         🪪  missingType.parameter                                                                                                  
+  84     Cannot access offset 'query' on array{scheme?: string, host?: string, port?: int<0, 65535>, user?: string, pass?: string,  
+         path?: string, query?: string, fragment?: string}|false.                                                                   
+         🪪  offsetAccess.nonOffsetAccessible                                                                                       
+  88     Method src\views\components\PaginationComponent::unparse_url() has no return type specified.                               
+         🪪  missingType.return                                                                                                     
+  88     Method src\views\components\PaginationComponent::unparse_url() has parameter $parsed_url with no type specified.           
+         🪪  missingType.parameter                                                                                                  
+ ------ --------------------------------------------------------------------------------------------------------------------------- 
+
+ ------ -------------------------------------------- 
+  Line   src/views/error/index.php                   
+ ------ -------------------------------------------- 
+  5      Variable $statusCode might not be defined.  
+         🪪  variable.undefined                      
+  6      Variable $subHeading might not be defined.  
+         🪪  variable.undefined                      
+  7      Variable $message might not be defined.     
+         🪪  variable.undefined                      
+  10     Variable $statusCode might not be defined.  
+         🪪  variable.undefined                      
+ ------ -------------------------------------------- 
+
+ ------ ------------------------------------------------ 
+  Line   src/views/layouts/root-layout.php               
+ ------ ------------------------------------------------ 
+  14     Variable $title might not be defined.           
+         🪪  variable.undefined                          
+  18     Variable $description might not be defined.     
+         🪪  variable.undefined                          
+  36     Variable $title might not be defined.           
+         🪪  variable.undefined                          
+  39     Variable $description might not be defined.     
+         🪪  variable.undefined                          
+  50     Variable $title might not be defined.           
+         🪪  variable.undefined                          
+  53     Variable $description might not be defined.     
+         🪪  variable.undefined                          
+  64     Variable $additionalTags might not be defined.  
+         🪪  variable.undefined                          
+  92     Variable $content might not be defined.         
+         🪪  variable.undefined                          
+ ------ ------------------------------------------------ 
+
+ ------ ----------------------------------------------------------------------------- 
+  Line   src/views/pages/company/jobs/[jobId]/applications/[applicationId]/index.php  
+ ------ ----------------------------------------------------------------------------- 
+  16     Variable $application might not be defined.                                  
+         🪪  variable.undefined                                                       
+  28     Variable $application might not be defined.                                  
+         🪪  variable.undefined                                                       
+  34     Variable $application might not be defined.                                  
+         🪪  variable.undefined                                                       
+  38     Variable $application might not be defined.                                  
+         🪪  variable.undefined                                                       
+  57     Variable $application might not be defined.                                  
+         🪪  variable.undefined                                                       
+  68     Variable $application might not be defined.                                  
+         🪪  variable.undefined                                                       
+  88     Variable $application might not be defined.                                  
+         🪪  variable.undefined                                                       
+  95     Variable $application might not be defined.                                  
+         🪪  variable.undefined                                                       
+  99     Variable $application might not be defined.                                  
+         🪪  variable.undefined                                                       
+  113    Variable $application might not be defined.                                  
+         🪪  variable.undefined                                                       
+  118    Variable $application might not be defined.                                  
+         🪪  variable.undefined                                                       
+  124    Variable $application might not be defined.                                  
+         🪪  variable.undefined                                                       
+  136    Variable $application might not be defined.                                  
+         🪪  variable.undefined                                                       
+  138    Variable $application might not be defined.                                  
+         🪪  variable.undefined                                                       
+  143    Variable $application might not be defined.                                  
+         🪪  variable.undefined                                                       
+  150    Variable $application might not be defined.                                  
+         🪪  variable.undefined                                                       
+  150    Variable $application might not be defined.                                  
+         🪪  variable.undefined                                                       
+ ------ ----------------------------------------------------------------------------- 
+
+ ------ ------------------------------------------------------------- 
+  Line   src/views/pages/company/jobs/[jobId]/applications/index.php  
+ ------ ------------------------------------------------------------- 
+  29     Variable $job might not be defined.                          
+         🪪  variable.undefined                                       
+  35     Variable $job might not be defined.                          
+         🪪  variable.undefined                                       
+  47     Variable $job might not be defined.                          
+         🪪  variable.undefined                                       
+  52     Variable $job might not be defined.                          
+         🪪  variable.undefined                                       
+  72     Variable $job might not be defined.                          
+         🪪  variable.undefined                                       
+  78     Variable $job might not be defined.                          
+         🪪  variable.undefined                                       
+  157    Variable $paginationComponent might not be defined.          
+         🪪  variable.undefined                                       
+ ------ ------------------------------------------------------------- 
+
+ ------ ----------------------------------------------------- 
+  Line   src/views/pages/company/jobs/[jobId]/edit/index.php  
+ ------ ----------------------------------------------------- 
+  23     Variable $currentJobId might not be defined.         
+         🪪  variable.undefined                               
+  192    Variable $fields might not be defined.               
+         🪪  variable.undefined                               
+ ------ ----------------------------------------------------- 
+
+ ------ ----------------------------------------------------- 
+  Line   src/views/pages/company/jobs/index.php               
+ ------ ----------------------------------------------------- 
+  334    Variable $paginationComponent might not be defined.  
+         🪪  variable.undefined                               
+ ------ ----------------------------------------------------- 
+
+ ------ ----------------------------------------------------- 
+  Line   src/views/pages/history/index.php                    
+ ------ ----------------------------------------------------- 
+  141    Variable $paginationComponent might not be defined.  
+         🪪  variable.undefined                               
+ ------ ----------------------------------------------------- 
+
+ ------ ---------------------------------------------- 
+  Line   src/views/pages/jobs/[jobId]/apply/index.php  
+ ------ ---------------------------------------------- 
+  13     Variable $job might not be defined.           
+         🪪  variable.undefined                        
+  27     Variable $job might not be defined.           
+         🪪  variable.undefined                        
+  34     Variable $job might not be defined.           
+         🪪  variable.undefined                        
+  39     Variable $job might not be defined.           
+         🪪  variable.undefined                        
+  60     Variable $job might not be defined.           
+         🪪  variable.undefined                        
+  72     Variable $job might not be defined.           
+         🪪  variable.undefined                        
+  94     Variable $job might not be defined.           
+         🪪  variable.undefined                        
+  105    Variable $jobId might not be defined.         
+         🪪  variable.undefined                        
+ ------ ---------------------------------------------- 
+
+ ------ --------------------------------------------- 
+  Line   src/views/pages/jobs/[jobId]/index.php       
+ ------ --------------------------------------------- 
+  30     Variable $job might not be defined.          
+         🪪  variable.undefined                       
+  37     Variable $job might not be defined.          
+         🪪  variable.undefined                       
+  42     Variable $job might not be defined.          
+         🪪  variable.undefined                       
+  61     Variable $job might not be defined.          
+         🪪  variable.undefined                       
+  73     Variable $job might not be defined.          
+         🪪  variable.undefined                       
+  93     Variable $job might not be defined.          
+         🪪  variable.undefined                       
+  108    Variable $application might not be defined.  
+         🪪  variable.undefined                       
+  111    Variable $job might not be defined.          
+         🪪  variable.undefined                       
+  122    Variable $application might not be defined.  
+         🪪  variable.undefined                       
+  193    Variable $job might not be defined.          
+         🪪  variable.undefined                       
+  197    Variable $job might not be defined.          
+         🪪  variable.undefined                       
+  201    Variable $job might not be defined.          
+         🪪  variable.undefined                       
+  231    Variable $job might not be defined.          
+         🪪  variable.undefined                       
+ ------ --------------------------------------------- 
+
+ ------ ----------------------------------------------------- 
+  Line   src/views/pages/jobs/index.php                       
+ ------ ----------------------------------------------------- 
+  280    Variable $paginationComponent might not be defined.  
+         🪪  variable.undefined                               
+ ------ ----------------------------------------------------- 
+
+ [ERROR] Found 427 errors                                                                                               
+
