@@ -42,7 +42,8 @@ class Router
      */
     public function post(string $path, callable $handlerFactory, array $middlewaresFactory = [])
     {
-        $this->addRoute('POST', $path, $handlerFactory, array_merge($middlewaresFactory, [$this->csrfMiddlewareFactory()]));
+        // $this->addRoute('POST', $path, $handlerFactory, array_merge($middlewaresFactory, [$this->csrfMiddlewareFactory()]));
+        $this->addRoute('POST', $path, $handlerFactory, $middlewaresFactory);
     }
 
     /**
@@ -50,7 +51,8 @@ class Router
      */
     public function put(string $path, callable $handlerFactory, array $middlewaresFactory = [])
     {
-        $this->addRoute('PUT', $path, $handlerFactory, array_merge($middlewaresFactory, [$this->csrfMiddlewareFactory()]));
+        // $this->addRoute('PUT', $path, $handlerFactory, array_merge($middlewaresFactory, [$this->csrfMiddlewareFactory()]));
+        $this->addRoute('PUT', $path, $handlerFactory, $middlewaresFactory);
     }
 
     /**
@@ -58,7 +60,8 @@ class Router
      */
     public function delete(string $path, callable $handlerFactory, array $middlewaresFactory = [])
     {
-        $this->addRoute('DELETE', $path, $handlerFactory, array_merge($middlewaresFactory, [$this->csrfMiddlewareFactory()]));
+        // $this->addRoute('DELETE', $path, $handlerFactory, array_merge($middlewaresFactory, [$this->csrfMiddlewareFactory()]));
+        $this->addRoute('DELETE', $path, $handlerFactory, $middlewaresFactory);
     }
 
     // generate csrf token
