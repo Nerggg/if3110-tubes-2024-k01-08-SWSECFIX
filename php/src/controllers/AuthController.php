@@ -52,7 +52,28 @@ class AuthController extends Controller
             // Get
             $res->renderPage($viewPathFromPages, $data);
         } else {
-            // Post
+            // --- Rate limiting logic start ---
+            session_start();
+            $email = $req->getBody()['email'] ?? '';
+            $maxAttempts = 5;
+            $cooldownSeconds = 300; // 5 minutes
+
+            if (!isset($_SESSION['login_attempts'])) {
+                $_SESSION['login_attempts'] = [];
+            }
+            $attempts = &$_SESSION['login_attempts'][$email];
+
+            if (isset($attempts['blocked_until']) && time() < $attempts['blocked_until']) {
+                $data['errorFields'] = [
+                    'email' => ['Too many failed attempts. Please try again later.'],
+                    'password' => ['Too many failed attempts. Please try again later.'],
+                ];
+                $data['fields'] = $req->getBody();
+                $res->renderPage($viewPathFromPages, $data);
+                return;
+            }
+            // --- Rate limiting logic end ---
+
             // Validate the request body
             $rules = [
                 'email' => ['required', 'email'],
@@ -65,6 +86,7 @@ class AuthController extends Controller
                 $data['errorFields'] = $validator->getErrorFields();
                 $data['fields'] = $req->getBody();
                 $res->renderPage($viewPathFromPages, $data);
+                return;
             }
 
             // Authenticate the user
@@ -72,7 +94,21 @@ class AuthController extends Controller
                 $email = $req->getBody()['email'];
                 $password = $req->getBody()['password'];
                 $user = $this->authService->signIn($email, $password);
+
+                // Reset attempts on successful login
+                unset($_SESSION['login_attempts'][$email]);
             } catch (BadRequestHttpException $e) {
+                // Increment failed attempts
+                if (!isset($attempts['count']) || (time() - ($attempts['last'] ?? 0)) > $cooldownSeconds) {
+                    $attempts['count'] = 1;
+                } else {
+                    $attempts['count']++;
+                }
+                $attempts['last'] = time();
+                if ($attempts['count'] >= $maxAttempts) {
+                    $attempts['blocked_until'] = time() + $cooldownSeconds;
+                }
+
                 // Failed to authenticate
                 $message = $e->getMessage();
                 $data['errorFields'] = [
@@ -81,6 +117,7 @@ class AuthController extends Controller
                 ];
                 $data['fields'] = $req->getBody();
                 $res->renderPage($viewPathFromPages, $data);
+                return;
             } catch (BaseHttpException $e) {
                 // Render error page
                 $dataError = [
