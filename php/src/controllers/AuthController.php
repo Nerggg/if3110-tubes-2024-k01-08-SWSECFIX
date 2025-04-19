@@ -53,7 +53,6 @@ class AuthController extends Controller
             $res->renderPage($viewPathFromPages, $data);
         } else {
             // --- Rate limiting logic start ---
-            session_start();
             $email = $req->getBody()['email'] ?? '';
             $maxAttempts = 5;
             $cooldownSeconds = 300; // 5 minutes
